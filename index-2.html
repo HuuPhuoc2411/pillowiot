@@ -38,10 +38,10 @@
 
 		.circle {
 			position: absolute;
-			width: 40px;
+			width: 80px;
 			/* Định nghĩa kích thước của chấm tròn */
-			height: 40px;
-			border-radius: 50%;
+			height: 60px;
+			/* border-radius: 50%; */
 			background-color: #681dfd94;
 			/* Màu sắc của chấm tròn */
 			transition: all 0.3s;
@@ -61,6 +61,7 @@
 			margin-right: auto;
 		}
 	</style>
+
 </head>
 
 <body class="" id="top">
@@ -68,12 +69,11 @@
 	<header>
 		<div class="clear"></div>
 		<div class="container_12">
+			<a href="index.html">
+				<img src="images2/LOGO2.png" alt="LOGO" style="width: 60%;">
+			</a>
 			<div class="grid_12">
-				<h1>
-					<a href="index.html">
-						<img src="images/logo.png" alt="Your Happy Family">
-					</a>
-				</h1>
+				
 				<div class="menu_block">
 					<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 						<ul class="sf-menu">
@@ -108,7 +108,7 @@
 
 	<div class="image-container">
 
-		<img src="nem.png" alt="Hình ảnh của bạn">
+		<img src="images2/nem.png" alt="Hình ảnh của bạn">
 
 
 		<div class="circle" id="circle1"></div>
@@ -117,12 +117,7 @@
 		<div class="circle" id="circle4"></div>
 		<div class="circle" id="circle5"></div>
 		<div class="circle" id="circle6"></div>
-		<div class="circle" id="circle7"></div>
-		<div class="circle" id="circle8"></div>
-		<div class="circle" id="circle9"></div>
-		<div class="circle" id="circle10"></div>
-		<div class="circle" id="circle11"></div>
-		<div class="circle" id="circle12"></div>
+
 
 
 		<p class="warning-box">Nệm cảnh báo ngồi lâu</p>
@@ -153,7 +148,7 @@
 	</footer>
 	</div>
 
-	<script>
+	<!-- <script>
 		function moveCircle(circleId, x, y) {
 			var circle = document.getElementById(circleId);
 			circle.style.transform = "translate(" + x + "px, " + y + "px)";
@@ -178,9 +173,31 @@
 
 
 		}
-		//changeCircleColor("circle1", "red");
+		changeCircleColor("circle1", "red");
 		//changeCircleColor("circle3", "blue");
 		//changeCircleColor("circle5", "orange");
+	</script> -->
+	<script>
+		function moveCircle(circleId, x, y) {
+			var circle = document.getElementById(circleId);
+			circle.style.transform = "translate(" + x + "px, " + y + "px)";
+		}
+	
+		function changeCircleColor(circleId, color) {
+			var circle = document.getElementById(circleId);
+			circle.style.backgroundColor = color;
+		}
+	
+		// Di chuyển hình tròn có ID là "circle1" tới vị trí mới
+		moveCircle("circle1", 230, -390);
+		moveCircle("circle2", 100, -320);
+		moveCircle("circle3", 350, -320);
+		moveCircle("circle4", 230, -240);
+		moveCircle("circle5", 100, -140);
+		moveCircle("circle6", 350, -140);
+	
+		// Thay đổi màu sắc của hình tròn có ID là "circle2" thành màu xanh dương
+		changeCircleColor("circle2", "blue");
 	</script>
 
 </body>
