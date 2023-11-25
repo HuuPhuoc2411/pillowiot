@@ -50,22 +50,22 @@ html[xmlns] .slides {display: block;}
 .flex-caption {}
 .flex-caption {
 	font: 600 36px/36px 'Open Sans', sans-serif;
-    color: #fff;
+    color: #fcf7f7;
     display: block;
     position: relative;
     z-index: 1;
     text-align: center;
     padding: 42px 0 24px;
     text-transform: uppercase;
-    background-color: #92ce0a;
+    background-color: hsla(190, 100%, 50%, 0.597);
 }
 
 .flex-caption.c2 {
-    background-color: #ffe202;
+    background-color: #02607d;
 }
 
 .flex-caption.c3 {
-	background-color: #0052da;
+	background-color: #0099da;
 }
 
 /* Direction Nav */

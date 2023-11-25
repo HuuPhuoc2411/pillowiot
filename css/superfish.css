@@ -43,7 +43,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 .sf-menu>li>a{
 	min-width: 104px;
 	text-align: center;
-	background-color: #92ce0a;
+	background-color: hsl(190, 100%, 50%);
 	display: block;
 	padding: 5px 10px 8px;
 	text-transform: uppercase;
@@ -56,15 +56,15 @@ nav{ position:relative;padding: 0px 0 0 0;}
 
 
 .sf-menu>li+li>a {
-	background-color: #ff5202;
+	background-color:hsl(190, 95%, 36%);
 }
 
 .sf-menu>li+li+li>a {
-	background-color: #0052da;
+	background-color:hsl(190, 100%, 50%);
 }
 
 .sf-menu>li+li+li+li>a {
-	background-color: #ff7f00;
+	background-color:hsl(190, 95%, 36%);
 }
 
 .sf-menu>li+li+li+li+li>a {
@@ -183,7 +183,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 	left: 77px;
 	top: -12px;
 	width: 86px;
-	background-color: #ff422f;
+	background-color: #eb3221;
 }
 .sf-menu li.sfHover li.sfHover ul li {
 	line-height: 36px;

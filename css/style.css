@@ -25,15 +25,16 @@ a[href^="tel:"] {
 body {
 	position: relative;
 	min-width: 1050px;
-    background: url(../images/bg_body.png) 0 0 repeat #f9f9f6;
-    color: #4c4c4c;
+    background: url(../images2/black5.jpg) 0 0 repeat #f9f9f6;
+    background-size: 70%;
+    color: #ffffff;
     font: 14px/20px Arial, Helvetica, sans-serif;
 }
 
 .ic {
 	border:0;
 	float:right;
-	background:#fff;
+	background:#190a9f;
 	color:#f00;
 	width:50%;
 	line-height:10px;
@@ -91,7 +92,8 @@ h2 {
     font-size: 36px;
     line-height: 36px;
     text-transform: uppercase;
-    color: #0052da;
+    /* color: #04337e; */
+    color: hsl(190, 100%, 50%);
     margin-top: -3px;
     margin-bottom: 38px;
 }
@@ -107,7 +109,7 @@ h3 {
     line-height: 30px;
     padding-top: 2px;
     text-transform: uppercase;
-    color: #0052da;
+    color: hsl(190, 100%, 50%);
     margin-bottom: 39px;
 }
 
@@ -126,8 +128,9 @@ h4 {
     line-height: 20px;
     padding-top: 48px;
     text-transform: uppercase;
-    color: #0052da;
+    color: hsl(190, 100%, 50%);
     margin-bottom: 28px;
+    line-height: 1.3; /* Giá trị số hoặc giá trị đơn vị */
 }
 
 h4.head1 {
@@ -188,7 +191,7 @@ a.btn {
     display: inline-block;
     margin-top: 16px;
     padding: 5px 13px 6px;
-    background-color: #97cc1e;
+    background-color: #9acf1e;
     box-shadow: 0px 0px 0px transparent;
 
 }
@@ -280,7 +283,8 @@ a.btn:hover {
     width: 1050px;
     margin: 0 auto 57px;
     padding-top: 53px;
-    background-color: #fff;
+    /* background-color: #0e0000; */
+    background-color: rgba(243, 239, 239, 0.19);
 }
 
 
@@ -362,7 +366,7 @@ a.donate:hover {
 
 
 .col1 {
-    color: #0052da;
+    color: #0c3b88;
 }
 
 .block2 {
@@ -389,13 +393,13 @@ a.donate:hover {
     display: block;
     font-size: 18px;
     line-height: 20px;
-    color: #625f5f;
+    color: #fefefe;
 }
 
 .text2 {
     font-size: 14px;
     margin-bottom: 14px;
-    color: #0052da;
+    color: hsl(190, 100%, 50%);
     text-transform: uppercase;
 }
 
@@ -719,7 +723,8 @@ footer {
     margin-bottom: 3px;
     line-height: 24px;
     display: block;
-    color: #0052da;
+    /* color: #0052da; */
+    color: hsl(190, 100%, 50%);
 
 }
 

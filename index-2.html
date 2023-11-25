@@ -16,6 +16,10 @@
 	<script src="js/jquery.equalheights.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+
 	<script>
 		$(document).ready(function () {
 			$().UItoTop({ easingType: 'easeOutQuart' });
@@ -27,6 +31,11 @@
 			margin-left: 1px;
 			margin-right: 200px;
 			/* Khoảng cách từ phải */
+		}
+
+		.image-container img {
+			margin-left: 10px;
+			/* Khoảng cách giữa hai hình ảnh */
 		}
 
 		img {
@@ -52,19 +61,107 @@
 			font-size: 30px;
 			color: #fff;
 			text-align: center;
-			background-color: rgb(10, 10, 0);
+			background-color: rgb(2, 165, 184);
 			padding: 20px;
 			border: 1px solid #000;
 			border-radius: 5px;
 			width: 350px;
-			margin-left: auto;
+			margin-left: 80px;
 			margin-right: auto;
 		}
+
+		.container3 {
+			display: flex;
+			width: 100%;
+		}
+
+		.column3 {
+			flex: 1;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		button {
+			border-radius: 10%;
+			/* Bo tròn gốc */
+			background-color: #00f2ff;
+			/* Màu nền */
+			color: #ffffff;
+			/* Màu chữ */
+			padding: 10px 20px;
+			/* Kích thước */
+			border: none;
+			/* Loại bỏ viền */
+
+		}
+
+		/* Kiểu dáng cho phần tử input */
+		input[type="number"] {
+			border-radius: 10px;
+			/* Bo tròn gốc */
+			border: 2px solid #00d9ff;
+			/* Viền xanh */
+			padding: 10px;
+			/* Kích thước */
+			outline: none;
+			/* Loại bỏ đường viền khi được focus */
+			box-shadow: 0 0 10px #00ff00;
+			/* Đổ bóng */
+			height: 20px;
+			width: 90px;
+		}
+
+		input[type="number2"] {
+			border-radius: 10px;
+			/* Bo tròn gốc */
+			border: 2px solid #00d9ff;
+			/* Viền xanh */
+			padding: 10px;
+			/* Kích thước */
+			outline: none;
+			/* Loại bỏ đường viền khi được focus */
+			box-shadow: 0 0 10px #00ff00;
+			/* Đổ bóng */
+			height: 20px;
+			width: 90px;
+			margin-left: 10px;
+		}
+		input[type="number3"] {
+			border-radius: 10px;
+			/* Bo tròn gốc */
+			border: 2px solid #00d9ff;
+			/* Viền xanh */
+			padding: 10px;
+			/* Kích thước */
+			outline: none;
+			/* Loại bỏ đường viền khi được focus */
+			box-shadow: 0 0 10px #00ff00;
+			/* Đổ bóng */
+			height: 20px;
+			width: 90px;
+			margin-left: 10px;
+		}
+
+		.top-section {
+			margin-left: 130px;
+			margin-bottom: 50px;
+		}
+
+		body {
+			font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+
+		
+
+
+		/* ---------------- */
 	</style>
 
 </head>
 
 <body class="" id="top">
+
+
 	<!--==============================header=================================-->
 	<header>
 		<div class="clear"></div>
@@ -73,7 +170,7 @@
 				<img src="images2/LOGO2.png" alt="LOGO" style="width: 60%;">
 			</a>
 			<div class="grid_12">
-				
+
 				<div class="menu_block">
 					<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 						<ul class="sf-menu">
@@ -106,25 +203,85 @@
 
 	<!--==============================Content=================================-->
 
+
 	<div class="image-container">
 
-		<img src="images2/nem.png" alt="Hình ảnh của bạn">
 
 
-		<div class="circle" id="circle1"></div>
-		<div class="circle" id="circle2"></div>
-		<div class="circle" id="circle3"></div>
-		<div class="circle" id="circle4"></div>
-		<div class="circle" id="circle5"></div>
-		<div class="circle" id="circle6"></div>
+		<div class="container3">
+			<div class="column3">
+				<img name="ghe" src="images2/trong.png" alt="nem">
+				<p id="ghe2" style="text-align: center;font-size: 30px;">Không phát hiện người ngồi</p>
+
+				<div style="display: flex;text-align: center;margin-left: 130px;">
+				<p style="font-size: 20px;color: aqua;">Thời gian đã ngồi</p>
+				<p id="timereal" style="font-size: 20px;color: aqua;">gio</p>
+				<p id="timereal2" style="font-size: 20px;color: aqua;">phut</p>
+				<p id="timereal3" style="font-size: 20px;color: aqua;">giay</p>
+			     </div>
+				 <p id="canhbao" style="text-align: center;font-size: 20px;">Trạng thái</p>
+			</div>
+			<div class="column3">
+				<img src="images2/nem.png" alt="nem">
+				<div class="circle" id="circle1"></div>
+				<div class="circle" id="circle2"></div>
+				<div class="circle" id="circle3"></div>
+				<div class="circle" id="circle4"></div>
+				<div class="circle" id="circle5"></div>
+				<div class="circle" id="circle6"></div>
+	
+				<p class="warning-box">Nệm cảnh báo ngồi lâu</p>
+
+			</div>
+		</div>
 
 
-
-		<p class="warning-box">Nệm cảnh báo ngồi lâu</p>
 
 	
 
+
+
 	</div>
+
+	<div class="top-section">
+
+
+		<input type="number" id="inputNumber" placeholder="Nhập giờ">
+		<button id="submitButton"
+			style="height: 45px;color: rgb(255, 255, 255);background-color: rgb(255, 94, 0);">Gửi</button>
+
+		<input type="number2" id="inputNumber2" placeholder="Nhập phút">
+		<button id="submitButton2"
+			style="height: 45px;color: rgb(255, 255, 255);background-color: rgb(0, 94, 255);">Gửi</button>
+			
+			<input type="number3" id="inputNumber3" placeholder="Nhập giây">
+		<button id="submitButton3"
+			style="height: 45px;color: rgb(9, 9, 9);background-color: rgb(0, 255, 81);">Gửi</button>
+
+		<br><br>
+		<p id="time1" style="font-size: 20px;color: #00f2ff;">Cài đặt thời gian cảnh báo</p>
+		<div style="display: flex;">
+			<p style="font-size: 20px;color: #f0f2f8;">Thời gian </p>
+			<p id="settime" style="font-size: 20px;color: #ff6f00;">giờ</p>
+			<p id="settime2" style="font-size: 20px;color: #00c8ff; margin-left: 5px;">phút</p>
+			<p id="settime3" style="font-size: 20px;color: #00ff1a; margin-left: 5px;">giây</p>
+		</div>
+		<div class="toggle-section">
+			<br><br>
+			<div style="display: flex;align-items: center;">
+			<button id="toggleButton"
+				style="color: #f6f1f1;font-size: 40px;margin-left: 40px;border-radius: 80px;height: 90px;width: 150px;background-color:rgb(255, 123, 0); ">Off</button>
+				<img name="music1" src="images2/on_music.png" alt="amthanh" style="width: 5%;margin-left: 20px;">
+				<a href="https://docs.google.com/spreadsheets/d/1H4CkR00RIhf5_R_koorhFXXxIwFcWuURrHcpZT5Tde8/edit?usp=sharing">
+					<img style="width: 50%;" src="images2/ss1.png" alt="Hình ảnh" />
+				  </a>
+			
+		</div>
+		<p style="font-size: 20px;color: #00f2ff;margin-top: 10px;margin-left: 10px;">Nút điều khiển âm thanh
+		</p>
+		</div>
+	</div>
+
 
 
 	<!--==============================footer=================================-->
@@ -147,57 +304,400 @@
 		</div>
 	</footer>
 	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
 
-	<!-- <script>
-		function moveCircle(circleId, x, y) {
-			var circle = document.getElementById(circleId);
-			circle.style.transform = "translate(" + x + "px, " + y + "px)";
-		}
-		function changeCircleColor(circleId, color) {
-			var circle = document.getElementById(circleId);
-			circle.style.backgroundColor = color;
-		}
-		var startX = 125; // Tọa độ x ban đầu của hàng đầu tiên
-		var startY = -390; // Tọa độ y ban đầu của hàng đầu tiên
-		var spacingX = 110; // Khoảng cách ngang giữa các chấm tròn
-		var spacingY = 80; // Khoảng cách dọc giữa các hàng
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
 
-		for (var i = 1; i <= 12; i++) {
-			var row = Math.ceil(i / 3); // Xác định hàng hiện tại
-			var col = (i - 1) % 3 + 1; // Xác định cột hiện tại
-
-			var x = startX + (col - 1) * spacingX;
-			var y = startY + (row - 1) * spacingY;
-
-			moveCircle("circle" + i, x, y);
-
-
-		}
-		changeCircleColor("circle1", "red");
-		//changeCircleColor("circle3", "blue");
-		//changeCircleColor("circle5", "orange");
-	</script> -->
 	<script>
+
+		const firebaseConfig = {
+			apiKey: "AIzaSyDr9CIKuXLizbXrshlaU3PgcbLoMfTpuz8",
+			authDomain: "iot-pillow-8244a.firebaseapp.com",
+			databaseURL: "https://iot-pillow-8244a-default-rtdb.firebaseio.com",
+			projectId: "iot-pillow-8244a",
+			storageBucket: "iot-pillow-8244a.appspot.com",
+			messagingSenderId: "329784242992",
+			appId: "1:329784242992:web:8f8f198f518a1629f10ef5"
+		};
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+
 		function moveCircle(circleId, x, y) {
 			var circle = document.getElementById(circleId);
 			circle.style.transform = "translate(" + x + "px, " + y + "px)";
 		}
-	
+
 		function changeCircleColor(circleId, color) {
 			var circle = document.getElementById(circleId);
 			circle.style.backgroundColor = color;
 		}
-	
+
 		// Di chuyển hình tròn có ID là "circle1" tới vị trí mới
-		moveCircle("circle1", 230, -390);
-		moveCircle("circle2", 100, -320);
-		moveCircle("circle3", 350, -320);
-		moveCircle("circle4", 230, -240);
-		moveCircle("circle5", 100, -140);
-		moveCircle("circle6", 350, -140);
-	
-		// Thay đổi màu sắc của hình tròn có ID là "circle2" thành màu xanh dương
-		changeCircleColor("circle2", "blue");
+		moveCircle("circle1", 230, -160);
+		moveCircle("circle2", 90, -400);
+		moveCircle("circle3", 350, -400);
+		moveCircle("circle4", 230, -310);
+		moveCircle("circle5", 350, -240);
+		moveCircle("circle6", 120, -240);
+
+
+		var pillowValues = []; // Mảng chứa các giá trị của pillow1 đến pillow6
+		var a = 0;
+		// Lấy giá trị từ Firebase và đặt vào mảng pillowValues
+		var firebaseRefs = [
+			firebase.database().ref().child('data_pillow1/data1'),
+			firebase.database().ref().child('data_pillow1/data2'),
+			firebase.database().ref().child('data_pillow1/data3'),
+			firebase.database().ref().child('data_pillow1/data4'),
+			firebase.database().ref().child('data_pillow1/data5'),
+			firebase.database().ref().child('data_pillow1/data6')
+		];
+
+		// Lắng nghe sự thay đổi của các giá trị và cập nhật vào mảng pillowValues
+		firebaseRefs.forEach(function (ref, index) {
+			ref.on('value', function (snap) {
+				pillowValues[index] = snap.val();
+				//console.log(pillowValues[index]);
+				checkPillowValues();
+			});
+		});
+
+		// Hàm kiểm tra giá trị của các pillow
+		function checkPillowValues() {
+			var allZeros = pillowValues.every(function (value) {
+				return value === 0;
+			});
+
+			if (allZeros) {
+				//console.log("Sai"); // In ra "Sai" nếu tất cả các giá trị đều là 0
+				a = 0;
+				//console.log(a);
+
+			} else {
+
+				//console.log("Đúng"); // In ra "Đúng" nếu có ít nhất một giá trị khác 0
+				a = 1;
+				//console.log(a);
+
+
+			}
+			if (a == 0) {
+				document.getElementById("ghe2").innerHTML = "Không phát hiện người ngồi";
+				document.images['ghe'].src = 'images2/trong.png';
+
+
+			}
+			if (a == 1) {
+				document.getElementById("ghe2").innerHTML = "Phát hiện người ngồi";
+				document.images['ghe'].src = 'images2/ngoi.png';
+
+			}
+
+
+		}
+
+
+
+
+
+
+
+		var pillow1 = firebase.database().ref().child('data_pillow1/data1');
+		pillow1.on('value', snap => {
+			if (snap.val() == 0) {
+
+				changeCircleColor("circle1", "#681dfd94");
+
+
+			}
+			if (snap.val() == 1) {
+
+
+				changeCircleColor("circle1", "orange");
+
+
+			}
+		});
+
+		var pillow2 = firebase.database().ref().child('data_pillow1/data2');
+		pillow2.on('value', snap => {
+			if (snap.val() == 0) {
+
+				changeCircleColor("circle2", "#681dfd94");
+
+
+			}
+			if (snap.val() == 1) {
+
+				changeCircleColor("circle2", "orange");
+
+
+			}
+		});
+		var pillow3 = firebase.database().ref().child('data_pillow1/data3');
+		pillow3.on('value', snap => {
+			if (snap.val() == 0) {
+
+				changeCircleColor("circle3", "#681dfd94");
+
+			}
+			if (snap.val() == 1) {
+
+				changeCircleColor("circle3", "orange");
+
+
+			}
+		});
+		var pillow4 = firebase.database().ref().child('data_pillow1/data4');
+		pillow4.on('value', snap => {
+			if (snap.val() == 0) {
+
+				changeCircleColor("circle4", "#681dfd94");
+
+			}
+			if (snap.val() == 1) {
+
+				changeCircleColor("circle4", "orange");
+
+
+			}
+		});
+		var pillow5 = firebase.database().ref().child('data_pillow1/data5');
+		pillow5.on('value', snap => {
+			if (snap.val() == 0) {
+
+				changeCircleColor("circle5", "#681dfd94");
+
+
+
+			}
+			if (snap.val() == 1) {
+
+				changeCircleColor("circle5", "orange");
+
+
+			}
+		});
+		var pillow6 = firebase.database().ref().child('data_pillow1/data6');
+		pillow6.on('value', snap => {
+			if (snap.val() == 0) {
+
+				changeCircleColor("circle6", "#681dfd94");
+
+
+
+			}
+			if (snap.val() == 1) {
+
+				changeCircleColor("circle6", "orange");
+
+
+			}
+		});
+/////////////////////////////////gio////////////////////////////////////////
+		var inputNumber = document.getElementById('inputNumber');
+		var submitButton = document.getElementById('submitButton');
+
+		submitButton.addEventListener('click', function () {
+			var numberValue = parseInt(inputNumber.value); // Chuyển đổi giá trị thành kiểu int
+			//var numberValue = inputNumber.value;
+			if (numberValue > 23) {
+				numberValue = 23;
+				Swal.fire({
+					icon: 'error',
+					title: 'Cảnh báo.',
+					text: 'Bạn chỉ có thể đặt tối đa là 24 giờ',
+					//   footer: '<a href="">Why do I have this issue?</a>'
+				})
+			}
+
+			if (isValidNumber(numberValue)) {
+				// Gửi dữ liệu lên Firebase
+				var firebaseRef = firebase.database().ref().child('input_pillow1/hour');
+				firebaseRef.set(numberValue)
+					.then(function () {
+						// Đặt lại giá trị của ô nhập liệu thành chuỗi rỗng
+						inputNumber.value = "";
+					})
+					.catch(function (error) {
+						console.log("Lỗi khi gửi dữ liệu:", error);
+					});
+			} else {
+				console.log("Giá trị không hợp lệ");
+			}
+		});
+
+		function isValidNumber(value) {
+			return /^\d+$/.test(value);
+		}
+ /////////////////////////////////////phut///////////////////////////////////
+
+		var inputNumber2 = document.getElementById('inputNumber2');
+		var submitButton2 = document.getElementById('submitButton2');
+
+		submitButton2.addEventListener('click', function () {
+			//var numberValue2 = inputNumber2.value;
+			var numberValue2 = parseInt(inputNumber2.value); // Chuyển đổi giá trị thành kiểu int
+			if (numberValue2 > 59) {
+				numberValue2 = 59;
+				Swal.fire({
+					icon: 'error',
+					title: 'Cảnh báo.',
+					text: 'Bạn chỉ có thể đặt tối đa là 60 phút',
+					//   footer: '<a href="">Why do I have this issue?</a>'
+				})
+			}
+
+			if (isValidNumber2(numberValue2)) {
+				// Gửi dữ liệu lên Firebase
+				var firebaseRef = firebase.database().ref().child('input_pillow1/min');
+
+				firebaseRef.set(numberValue2)
+					.then(function () {
+						// Đặt lại giá trị của ô nhập liệu thành chuỗi rỗng
+						inputNumber2.value = "";
+					})
+					.catch(function (error) {
+						console.log("Lỗi khi gửi dữ liệu:", error);
+					});
+			} else {
+				console.log("Giá trị không hợp lệ");
+			}
+		});
+
+		function isValidNumber2(value) {
+			return /^\d+$/.test(value);
+		}
+
+
+///////////////////////////////////////giay/////////////////////////////
+		var inputNumber3 = document.getElementById('inputNumber3');
+		var submitButton3 = document.getElementById('submitButton3');
+
+		submitButton3.addEventListener('click', function () {
+			var numberValue3 = parseInt(inputNumber3.value); // Chuyển đổi giá trị thành kiểu int
+			//var numberValue3 = inputNumber3.value;
+			if (numberValue3 > 59) {
+				numberValue3 = 59;
+				Swal.fire({
+					icon: 'error',
+					title: 'Cảnh báo.',
+					text: 'Bạn chỉ có thể đặt tối đa là 60 giay',
+					//   footer: '<a href="">Why do I have this issue?</a>'
+				})
+			}
+
+			if (isValidNumber3(numberValue3)) {
+				// Gửi dữ liệu lên Firebase
+				var firebaseRef = firebase.database().ref().child('input_pillow1/giay');
+
+				firebaseRef.set(numberValue3)
+					.then(function () {
+						// Đặt lại giá trị của ô nhập liệu thành chuỗi rỗng
+						inputNumber3.value = "";
+					})
+					.catch(function (error) {
+						console.log("Lỗi khi gửi dữ liệu:", error);
+					});
+			} else {
+				console.log("Giá trị không hợp lệ");
+			}
+		});
+
+		function isValidNumber3(value) {
+			return /^\d+$/.test(value);
+		}
+
+
+
+
+
+
+
+		var toggleButton = document.getElementById('toggleButton');
+
+		toggleButton.addEventListener('click', function () {
+			toggleButton.classList.toggle('on');
+			toggleButton.classList.toggle('off');
+
+			var value = toggleButton.classList.contains('on') ? '1' : '0';
+			toggleButton.textContent = value === '1' ? 'On' : 'Off';
+			if(value==0){
+				document.images['music1'].src = 'images2/off_music.png';
+
+				Swal.fire({
+					icon: 'error',
+					title: 'CHÚ Ý',
+					text: 'Khi bạn tắt âm thanh bạn sẽ không thể nghe được cảnh báo trên thiết bị',
+					//   footer: '<a href="">Why do I have this issue?</a>'
+				})
+			}
+			else{
+				document.images['music1'].src = 'images2/on_music.png';
+			}
+
+			// Gửi giá trị đến Firebase
+			 // Chuyển đổi value thành kiểu số nguyên (int)
+			var intValue = parseInt(value);
+			var firebaseRef = firebase.database().ref().child('music/data');
+			firebaseRef.set(intValue)
+				.then(function () {
+					console.log("Đã gửi giá trị thành công:", value);
+				})
+				.catch(function (error) {
+					console.log("Lỗi khi gửi giá trị:", error);
+				});
+		});
+
+
+		var settime = firebase.database().ref().child('input_pillow1/hour');
+		settime.on('value', snap => {
+			document.getElementById("settime").innerHTML = " : "+snap.val() + " giờ";
+
+		});
+		var settime2 = firebase.database().ref().child('input_pillow1/min');
+		settime2.on('value', snap => {
+			document.getElementById("settime2").innerHTML = " : " + snap.val() + " phút";
+
+		});	
+		var settime3 = firebase.database().ref().child('input_pillow1/giay');
+		settime3.on('value', snap => {
+			document.getElementById("settime3").innerHTML = " : " + snap.val() + " giây";
+
+		});	
+////////////////////////////////////gio thuc//////////////
+var timereal = firebase.database().ref().child('time/gio');
+            timereal.on('value', snap => {
+			document.getElementById("timereal").innerHTML = " : "+snap.val() ;
+
+		});
+		var timereal2 = firebase.database().ref().child('time/phut');
+            timereal2.on('value', snap => {
+			document.getElementById("timereal2").innerHTML = " : "+snap.val();
+
+		});
+		var timereal3 = firebase.database().ref().child('time/giay');
+            timereal3.on('value', snap => {
+			document.getElementById("timereal3").innerHTML = " : "+snap.val();
+
+		});
+		
+
+		var canhbao = firebase.database().ref().child('canhbao/data1');
+		canhbao.on('value', snap => {
+			if(snap.val()==1){
+		      document.getElementById("canhbao").innerHTML = "Đã ngồi quá lâu";
+
+			}
+			if(snap.val()==0){
+		      document.getElementById("canhbao").innerHTML = "Trạng thái bình thường";
+
+			}
+			
+
+		});
+
 	</script>
 
 </body>
