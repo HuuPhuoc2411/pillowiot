@@ -342,7 +342,7 @@
 		moveCircle("circle6", 120, -240);
 
 
-		var pillowValues = []; // Mảng chứa các giá trị của pillow1 đến pillow6
+		var pillowValues = []; // Mảng chứa các giá trị gửi về từ cảm biến
 		var a = 0;
 		// Lấy giá trị từ Firebase và đặt vào mảng pillowValues
 		var firebaseRefs = [
@@ -358,43 +358,35 @@
 		firebaseRefs.forEach(function (ref, index) {
 			ref.on('value', function (snap) {
 				pillowValues[index] = snap.val();
-				//console.log(pillowValues[index]);
+		
 				checkPillowValues();
 			});
 		});
-
-		// Hàm kiểm tra giá trị của các pillow
 		function checkPillowValues() {
 			var allZeros = pillowValues.every(function (value) {
 				return value === 0;
 			});
+			
 
 			if (allZeros) {
-				//console.log("Sai"); // In ra "Sai" nếu tất cả các giá trị đều là 0
 				a = 0;
-				//console.log(a);
 
-			} else {
+			} else { // nếu một trong các cảm biến có tín hiệu thì trả về a=1
 
-				//console.log("Đúng"); // In ra "Đúng" nếu có ít nhất một giá trị khác 0
 				a = 1;
-				//console.log(a);
-
-
 			}
+
 			if (a == 0) {
 				document.getElementById("ghe2").innerHTML = "Không phát hiện người ngồi";
 				document.images['ghe'].src = 'images2/trong.png';
 
-
 			}
 			if (a == 1) {
+				// cập nhật trạng thái có tín hiệu người ngồi
 				document.getElementById("ghe2").innerHTML = "Phát hiện người ngồi";
+				// thay đổi hình ảnh hiển thị
 				document.images['ghe'].src = 'images2/ngoi.png';
-
 			}
-
-
 		}
 
 
@@ -636,9 +628,6 @@
 			else{
 				document.images['music1'].src = 'images2/on_music.png';
 			}
-
-			// Gửi giá trị đến Firebase
-			 // Chuyển đổi value thành kiểu số nguyên (int)
 			var intValue = parseInt(value);
 			var firebaseRef = firebase.database().ref().child('music/data');
 			firebaseRef.set(intValue)
